@@ -32,4 +32,12 @@ type cases = [
 extends [] 하더라도 단순히 array로 취급되는게 아니라 어떤 타입의 array 인지 명시해줘야함.
 
 any[] 로 표기하긴 했지만 `readonly unknown[]` 도 똑같이 동작하는 듯
-왜 `readonly unknown`은 동작할까? - readonly가 붙는건 [length-of-tuple](/week2/18-length-of-tuple.md)에서 언급했듯 길이가 변경되면 안되기 때문인 듯 - 그렇다면 unknown 과 any의 차이점은?? - 일단 둘 다 해당 타입 변수에 어떤 값이던 할당이 가능 - 하지만 역순으로 할당할 때, - `any`는 `number` 타입 변수에 `any` 타입 값 할당 가능 - `unknown`은 `number` 타입 변수에 `unknown` 타입 값 할당 불가능
+
+왜 `readonly unknown`은 동작할까?
+
+- readonly가 붙는건 [length-of-tuple](/week2/18-length-of-tuple.md)에서 언급했듯 길이가 변경되면 안되기 때문인 듯
+  - 그렇다면 unknown 과 any의 차이점은??
+    - 일단 둘 다 해당 타입 변수에 어떤 값이던 할당이 가능
+    - 하지만 역순으로 할당할 때,
+    - `any`는 `number` 타입 변수에 `any` 타입 값 할당 가능
+    - `unknown`은 `number` 타입 변수에 `unknown` 타입 값 할당 불가능
