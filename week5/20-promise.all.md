@@ -38,3 +38,11 @@ https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5.html#t
 > the way that they recursively unwrap Promises.
 
 내부 리턴값(then으로 반환된 값)이 Promise 객체인 경우가 없도록, 최종적인 결과 타입값을 return 해준다.
+
+```ts
+type Await<T> = T extends Promise<infer P> ? Await<P> : T
+
+declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{ [K in keyof T]: Await<T[K]>}
+```
+
+재귀 이용해서 풀어봄
