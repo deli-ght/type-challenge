@@ -1,0 +1,16 @@
+# 20230731
+
+## [문제](https://www.typescriptlang.org/play?ssl=26&ssc=71&pln=24&pc=1#code/PQKgUABBAsCMAcAmCBaCAxAlgIwPYDsBDAY2MwgGUBTARwFcr9irJUV2PXsBPCAd0z4AJgBtMhfAHMIACgACA4SjETJASggBiALZUhmOtrCtNpiAEUGAZwAumAsagBJbQAcRVXfhsRCESYxUAE6YxBAABlh4RKSYADwAKgB84RA2ABaEPjaEANZUVr4Q+IbYwREJqRJCEEFUNnRB+IWYNoXEuEF1Vq4E+lIQANpRBCRkxaXBALoy6TY2rlYAXMDAjAB0ArmYrnri652SwFuYwCMxZAD6JdplQWrrjhAJ6VQQVrQMTG+2hEFtS1YsAANBAQRBEKCAMyggCsoPgoNgMIh4Kh0Dh8Ig8AAnEjoBiIOtiU90J0IFQAB6ENweVjhBltVg2bi7CAAJQKdBENlgEAAvBgcKNYnEoUkIKsIczWW9OVZuTZkILzmN4vAJVLELB6QynhKAGqYKh8CAECAAcVaAAk6NglhA5gtlqs2sR0usAFZWA5BI5wJBgEDAYygCCXCORqORiAATVwjQgAGFcEI3tbgm9o9mIxBg8YWWzVaKEhTKTZGEJCjc7qCk406t4nMIqWWK8JChJuIMpgKhrApqCAAp1ABubcrnfw3d7gp7dYbjB8VPbVd8057fcGA4lgvrXSXzbTlMGAHIPFIMqfeyvJ89WAB+ZOL7xni+SK9TVgO4tkRKgwZiXWfdGxsI8qSRQdnwPbwAKAkcqFHUEgJApcpiSUMQHDHNo2eAofCTQgPkKHDcPzTA3E6bJZQgABvCAAFF6EIERQQYyldmIHwAF8IAAMyCXBtAgU85ELKgUHdFj3wKYA6DsEQrFPAsaOIIiCi3Vh2M4mw4iYugWLiX94lgJIkSSMytI4qguL05iRCM4ULniRAzLBCzgSsnS7IMhzjLFNzXMsqBtJs3T9MM-yNVBbUPLAL8wDDUiowwRoMnKCgK0WbDksuPMQ1AVgJQoTI6ggbgEyCd5cBEeT7GaB0nUWFZgDdD1vV9f0EEQYAJCsPhgiKiAjRNararsAhlkdeZmtdKx3S9H1DmAAMeqsGq6smoaAFlOjeJNMhEGSpqal1Wvm9qlr9IMQyAA)
+
+```ts
+type Fibonacci<
+  T extends number,
+  CurrentIndex extends any[] = [1],
+  Prev extends any[] = [],
+  Current extends any[] = [1]
+> = CurrentIndex["length"] extends T
+  ? Current["length"]
+  : Fibonacci<T, [...CurrentIndex, 1], Current, [...Prev, ...Current]>;
+```
+
+너무..어려워요..
