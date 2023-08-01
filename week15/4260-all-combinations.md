@@ -12,10 +12,10 @@ type AllCombinations<
       | AllCombinations<POST, `${PRE}${C}`>
   : "";
 ```
-
-<Summary>
+<details>
+<summary>
 테스트 케이스
-</Summary>
+</summary>
 
 ```ts
 /* _____________ Test Cases _____________ */
@@ -118,3 +118,4 @@ type cases = [
   >
 ];
 ```
+</details>
